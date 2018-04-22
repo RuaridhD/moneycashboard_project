@@ -4,8 +4,8 @@ require_relative( "../models/type.rb" )
 require("pry-byebug")
 
 Merchant.delete_all()
-Transaction.delete_all()
 Type.delete_all()
+Transaction.delete_all()
 
 
 merchant1 = Merchant.new({
