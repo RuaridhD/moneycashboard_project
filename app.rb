@@ -5,5 +5,5 @@ require_relative('controllers/transactions_controller')
 require_relative('controllers/types_controller')
 
 get '/' do
-  erb( :index )
+  erb(:index)
 end
