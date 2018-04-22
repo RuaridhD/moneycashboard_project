@@ -35,4 +35,10 @@ class Type
     return Type.new(result.first)
   end
 
+  def update()
+    sql = "UPDATE types SET type = $1 WHERE id = $2"
+    values = [@type, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

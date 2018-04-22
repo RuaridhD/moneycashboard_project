@@ -8,8 +8,8 @@ class TransactionTest < MiniTest::Test
   def setup()
     @transaction1 = Transaction.new ({
       "id" => 1,
-      "merchant_id" => 2,
-      "type_id" => 3,
+      "merchant_id" => 1,
+      "type_id" => 1,
       "cost" => 21.55
       })
     end
@@ -19,15 +19,22 @@ class TransactionTest < MiniTest::Test
     end
 
     def test_merchant_id
-      assert_equal(2, @transaction1.merchant_id)
+      assert_equal(1, @transaction1.merchant_id)
     end
 
     def test_type_id
-      assert_equal(3, @transaction1.type_id)
+      assert_equal(1, @transaction1.type_id)
     end
 
     def test_cost()
       assert_equal(21.55, @transaction1.cost)
     end
+
+    def test_update()
+      @transaction1.cost = 22.55
+      @transaction1.update
+      assert_equal(22.55, @transaction1.cost)
+    end
+
 
   end

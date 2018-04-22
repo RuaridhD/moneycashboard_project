@@ -37,4 +37,11 @@ class Transaction
     result = SqlRunner.run(sql, values)
     return Transaction.new(result.first)
   end
+
+  def update()
+    sql = "UPDATE transactions SET (merchant_id, type_id, cost, date) = ($1, $2, $3, $4) WHERE id = $5"
+    values = [@merchant_id, @type_id, @cost, @date, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

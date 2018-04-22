@@ -20,6 +20,12 @@ class TypeTest < MiniTest::Test
       assert_equal("Groceries", @type1.type)
     end
 
+    def test_update()
+      @type1.type = "Clothes"
+      @type1.update
+      assert_equal("Clothes", @type1.type)
+    end
+
 
 
   end

@@ -20,5 +20,11 @@ class MerchantTest < MiniTest::Test
       assert_equal("Tesco", @merchant1.name)
     end
 
+    def test_update()
+      @merchant1.name = "Asda"
+      @merchant1.update
+      assert_equal("Asda", @merchant1.name)
+    end
+
 
   end

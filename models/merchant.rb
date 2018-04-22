@@ -35,5 +35,11 @@ class Merchant
     return Merchant.new(result.first)
   end
 
+  def update()
+    sql = "UPDATE merchants SET name = $1 WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
 end
