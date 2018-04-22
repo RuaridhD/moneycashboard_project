@@ -19,5 +19,6 @@ CREATE TABLE transactions
   id SERIAL8 primary key,
   cost DECIMAL,
   merchant_id INT8 references merchants(id),
-  type_id INT8 references types(id)
+  type_id INT8 references types(id),
+  date VARCHAR(255)
 );
