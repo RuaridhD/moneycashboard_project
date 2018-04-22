@@ -1,6 +1,6 @@
+DROP TABLE transactions;
 DROP TABLE merchants;
 DROP TABLE types;
-DROP TABLE transactions;
 
 CREATE TABLE merchants
 (

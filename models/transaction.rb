@@ -1,9 +1,9 @@
-require_relative('../db/sql_runner')
+require_relative('../database/sqlrunner')
 
 class Transaction
 
   attr_reader :id
-  attr_accessor :merchant_id :type_id :cost :date
+  attr_accessor :merchant_id, :type_id, :cost, :date
 
   def initialize(options)
     @id = options['id'].to_i
