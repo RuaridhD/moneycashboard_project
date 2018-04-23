@@ -2,6 +2,7 @@ DROP TABLE transactions;
 DROP TABLE merchants;
 DROP TABLE types;
 
+
 CREATE TABLE merchants
 (
   id SERIAL8 primary key,
@@ -20,5 +21,5 @@ CREATE TABLE transactions
   cost FLOAT8,
   merchant_id INT8 references merchants(id),
   type_id INT8 references types(id),
-  date VARCHAR(255)
+  date DATE
 );

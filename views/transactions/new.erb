@@ -1,14 +1,31 @@
 <h1>Add a new transaction to your list</h1>
 
 <form action="/transactions" method="post">
+<label for="Merchant Name:">Merchant Name:</label>
+<!-- loop through @merchants, populate select -->
+<select name="merchant_id">
+  <% for merchant in @merchants %>
+  <option value="<%= merchant.id %>"><%= merchant.name %></option>
+  <% end %>
+</select>
+<!-- <input type="text" id="merchant_name" name="merchant_name"> -->
+
   <label>
-    Select a type:
-    <<label for="Type">Type of Purchase:</label>
-    <select name="type" id="type">
-      <option value="Groceries">Groceries</option>
-      <option value="Clothes">Clothes</option>
-      <option value="Recreational">Recreational</option>
-      <option value="Investment">Investment</option>
-      <option value="Miscellaneous">Miscellaneous</option>
-    </select>
+    <!-- Add a shop name, type of transaction, cost, and date: -->
+    <label for="Type">Type of Purchase:</label>
+    <select name="type_id">
+    <% for type in @types %>
+    <option value="<%= type.id %>"><%= type.type %></option>
+    <% end %>
+  </select>
   </label>
+
+  <label for="cost">Cost:</label>
+  <input type="number" step="any" id="cost" name="cost">
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date">
+
+  <input class="btn btn--action" type='submit' value="Add Transaction">
+
+</form>
