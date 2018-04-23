@@ -20,11 +20,35 @@
     <td><%= transaction.date %></td>
   </tr>
   <% end %>
+</table>
+<table>
+  <th>Total Amount Spent This Month</th>
   <tr>
     <td><%=@count%></td>
   </tr>
-
 </table>
+
+<table>
+  <th>Total Amount Spent This Month By This Type</th>
+  <!-- <label>
+    <label for="Type">Choose a Type to Filter By:</label>
+    <select name="type_id">
+    <% for type in @types %>
+    <option value="<%= type.id %>"><%= type.type %></option>
+    <% end %>
+  </select>
+  </label> -->
+    <tr>
+    <td><%=transaction.count_by_id%></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
 
 <p class="btn--wrapper">
   <a class="btn btn--action" href="/transactions/new">Add your latest transaction.</a>

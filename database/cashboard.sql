@@ -23,3 +23,6 @@ CREATE TABLE transactions
   type_id INT8 references types(id),
   date DATE
 );
+
+SELECT type_id, sum(cost) FROM transactions
+group by S_Date, TID
