@@ -1,3 +1,27 @@
 <h1>Transactions</h1>
 <h2>Listed below are all of the transactions you made this month.</h2>
 <h3>Sort the table by merchant name, cost, or type!</h3>
+
+<table>
+  <tr>
+    <th>Shop</th>
+    <th></th>
+    <th>Type</th>
+    <th></th>
+    <th>Cost</th>
+    <th></th>
+    <th>Date</th>
+  </tr>
+  <% for transaction in @transactions %>
+  <tr>
+    <td><%= transaction.merchant.name %></td><td>|</td>
+    <td><%= transaction.type.type %></td><td>|</td>
+    <td><%= transaction.cost %></td><td>|</td>
+    <td><%= transaction.date %></td>
+  </tr>
+  <% end %>
+</table>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/transactions/new">Add your latest transaction</a>
+</p>

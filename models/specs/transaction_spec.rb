@@ -19,7 +19,7 @@ class TransactionTest < MiniTest::Test
     end
 
     def test_merchant_id
-      assert_equal(1, @transaction1.merchant_id)
+      assert_equal(1, @transaction1.merchant.id)
     end
 
     def test_type_id
@@ -34,6 +34,14 @@ class TransactionTest < MiniTest::Test
       @transaction1.cost = 22.55
       @transaction1.update
       assert_equal(22.55, @transaction1.cost)
+    end
+
+    def test_type
+      assert_equal("Groceries", @transaction1.type.type)
+    end
+
+    def test_merchant
+      assert_equal("Tesco", @transaction1.merchant.name)
     end
 
 

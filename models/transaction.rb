@@ -1,9 +1,11 @@
 require_relative('../database/sqlrunner')
+require_relative('../models/merchant.rb')
+require_relative('../models/type.rb')
 
 class Transaction
 
-  attr_reader :id
-  attr_accessor :merchant_id, :type_id, :cost, :date
+  attr_reader :id, :merchant_id, :type_id
+  attr_accessor :cost, :date
 
   def initialize(options)
     @id = options['id'].to_i
@@ -49,6 +51,20 @@ class Transaction
     transactions = SqlRunner.run(sql)
     result = transactions.map {|transaction| Transaction.new(transaction)}
     return result
+  end
+
+  def type()
+    sql = "SELECT * FROM types WHERE id = $1"
+    values = [@type_id]
+    results = SqlRunner.run(sql, values)
+    return Type.new(results.first)
+  end
+
+  def merchant()
+    sql = "SELECT * FROM merchants WHERE id = $1"
+    values = [@merchant_id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
   end
 
 end
