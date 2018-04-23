@@ -2,16 +2,13 @@
 
 <form action="/transactions" method="post">
 <label for="Merchant Name:">Merchant Name:</label>
-<!-- loop through @merchants, populate select -->
 <select name="merchant_id">
   <% for merchant in @merchants %>
   <option value="<%= merchant.id %>"><%= merchant.name %></option>
   <% end %>
 </select>
-<!-- <input type="text" id="merchant_name" name="merchant_name"> -->
 
   <label>
-    <!-- Add a shop name, type of transaction, cost, and date: -->
     <label for="Type">Type of Purchase:</label>
     <select name="type_id">
     <% for type in @types %>

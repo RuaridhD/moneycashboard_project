@@ -8,6 +8,7 @@ require_relative('../models/type.rb')
 
 get '/transactions' do
   @transactions = Transaction.all()
+  @count = Transaction.count()
   erb (:"transactions/index")
 end
 

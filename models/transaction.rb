@@ -67,4 +67,9 @@ class Transaction
     return Merchant.new(results.first)
   end
 
+  def self.count()
+    sql = "SELECT SUM(cost) FROM transactions"
+    return SqlRunner.run(sql)[0]['sum'].to_f
+  end
+
 end
