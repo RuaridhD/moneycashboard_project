@@ -73,7 +73,15 @@ position: relative;
 top: 120px;
 width: 500px;
 margin: 0 auto;
-/* white-space: wrap; */
+text-align: center;
+display: inline;
+}
+
+#section-show-txns {
+position: relative;
+top: 120px;
+width: 500px;
+margin: 0 auto;
 text-align: center;
 display: inline;
 }

@@ -1,0 +1,20 @@
+<div id = "section-show-txns">
+  <h1>Showing <%=@transaction.merchant.name%> Transaction from <%=@transaction.date %>.</h1>
+  <table id = "show">
+    <tr>
+      <th>Shop</th>
+      <th>Type</th>
+      <th>Cost</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+      <td><%=@transaction.merchant.name %></td>
+      <td><%=@transaction.type.type %></td>
+      <td>£<%=@transaction.cost %></td>
+      <td><%=@transaction.date %></td>
+    </table>
+
+    <form action="/transactions/<%= @transaction.id %>/delete" method="POST">
+      <input class="button" type="submit" value="DELETE" />
+    </form>
+  </div>

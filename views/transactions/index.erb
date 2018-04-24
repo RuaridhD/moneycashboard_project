@@ -13,7 +13,7 @@
       </tr>
       <% for transaction in @transactions %>
       <tr>
-        <td><%= transaction.merchant.name %></td>
+        <td><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant.name %></a></td>
         <td><%= transaction.type.type %></td>
         <td>£<%= transaction.cost %></td>
         <td><%= transaction.date %></td>
