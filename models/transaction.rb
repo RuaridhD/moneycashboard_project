@@ -75,12 +75,6 @@ class Transaction
   def self.count_by_id
     sql = "SELECT types.type, sum(cost) FROM transactions INNER JOIN types ON transactions.type_id = types.id GROUP BY types.type;"
     result = SqlRunner.run(sql)
-    # result = id_hash.each do |merchant, cost|
-    # "#{merchant.to_s} #{cost.to_s}"
-    # end
-    # return result
   end
 
 end
-
-    # sql = "SELECT type_id, sum(cost) FROM transactions INNER JOIN types ON type GROUP BY type;"

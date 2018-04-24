@@ -115,6 +115,69 @@ transaction1 = Transaction.new({
 
 transaction1.save()
 
+transaction2 = Transaction.new({
+  "merchant_id" => merchant2.id,
+  "type_id" => type1.id,
+  "cost" => 83.42,
+  "date" => "2018/03/23"
+})
+
+transaction2.save()
+
+transaction3 = Transaction.new({
+  "merchant_id" => merchant5.id,
+  "type_id" => type1.id,
+  "cost" => 3.39,
+  "date" => "2018/04/01"
+})
+
+transaction3.save()
+
+transaction4 = Transaction.new({
+  "merchant_id" => merchant6.id,
+  "type_id" => type4.id,
+  "cost" => 8.20,
+  "date" => "2018/04/03"
+})
+
+transaction4.save()
+
+transaction5 = Transaction.new({
+  "merchant_id" => merchant9.id,
+  "type_id" => type2.id,
+  "cost" => 30.98,
+  "date" => "2018/04/10"
+})
+
+transaction5.save()
+
+transaction6 = Transaction.new({
+  "merchant_id" => merchant3.id,
+  "type_id" => type5.id,
+  "cost" => 30.00,
+  "date" => "2018/04/10"
+})
+
+transaction6.save()
+
+transaction7 = Transaction.new({
+  "merchant_id" => merchant4.id,
+  "type_id" => type4.id,
+  "cost" => 2.25,
+  "date" => "2018/04/15"
+})
+
+transaction7.save()
+
+transaction7 = Transaction.new({
+  "merchant_id" => merchant5.id,
+  "type_id" => type6.id,
+  "cost" => 5.99,
+  "date" => "2018/04/20"
+})
+
+transaction7.save()
+
 #
 #
 # binding.pry

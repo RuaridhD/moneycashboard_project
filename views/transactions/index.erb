@@ -1,3 +1,5 @@
+<div id = "section-all-txns">
+<div class = "content">
 <h1>Transactions</h1>
 <h2>Listed below are all of the transactions you made this month.</h2>
 <h3>Sort the table by merchant name, cost, or type!</h3>
@@ -16,7 +18,7 @@
   <tr>
     <td><%= transaction.merchant.name %></td><td>|</td>
     <td><%= transaction.type.type %></td><td>|</td>
-    <td><%= transaction.cost %></td><td>|</td>
+    <td>£<%= transaction.cost %></td><td>|</td>
     <td><%= transaction.date %></td>
   </tr>
   <% end %>
@@ -24,7 +26,7 @@
 <h4>Total Amount Spent This Month</h4>
 <table>
   <tr>
-    <td><%=@count%></td>
+    <td>£<%=@count%></td>
   </tr>
 </table>
 
@@ -37,7 +39,7 @@
 </tr>
 <tr>
   <%for position in @total_by_tag%>
-  <td><%=position['sum']%></td>
+  <td>£<%=position['sum']%></td>
   <%end%>
 </tr>
 
@@ -46,12 +48,8 @@
 </table>
 
 
-
-
-
-
-
-
 <p class="btn--wrapper">
   <a class="btn btn--action" href="/transactions/new">Add your latest transaction.</a>
 </p>
+</div>
+</div>
