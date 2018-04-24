@@ -29,7 +29,7 @@
 </table>
 
 <table>
-  <th>Total Amount Spent This Month By This Type</th>
+  <th>Total Amount Spent This Month By Type</th>
   <!-- <label>
     <label for="Type">Choose a Type to Filter By:</label>
     <select name="type_id">
@@ -39,7 +39,14 @@
   </select>
   </label> -->
     <tr>
-    <td><%=transaction.count_by_id%></td>
+    <%for position in @total_by_tag%>
+    <tr><td><%=position['type']%></td></tr>
+    <%end%>
+    <%for position in @total_by_tag%>
+    <tr><td><%=position['sum']%></td></tr>
+    <%end%>
+
+
   </tr>
 </table>
 

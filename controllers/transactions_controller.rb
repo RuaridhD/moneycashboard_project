@@ -10,6 +10,7 @@ get '/transactions' do
   @transactions = Transaction.all()
   @count = Transaction.count()
   @types = Type.all()
+  @total_by_tag = Transaction.count_by_id()
   erb (:"transactions/index")
 end
 
