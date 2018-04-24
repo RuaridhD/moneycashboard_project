@@ -1,40 +1,39 @@
 <div id = "section-all-txns">
 <div class = "content">
 <h1>Transactions</h1>
-<h2>Listed below are all of the transactions you made this month.</h2>
-<h3>Sort the table by merchant name, cost, or type!</h3>
+<h2></h2>
+<h3>All Transactions Made: Last 30 Days</h3>
 
-<table>
+<table id = "all">
   <tr>
     <th>Shop</th>
-    <th></th>
     <th>Type</th>
-    <th></th>
     <th>Cost</th>
-    <th></th>
     <th>Date</th>
   </tr>
   <% for transaction in @transactions %>
   <tr>
-    <td><%= transaction.merchant.name %></td><td>|</td>
-    <td><%= transaction.type.type %></td><td>|</td>
-    <td>£<%= transaction.cost %></td><td>|</td>
+    <td><%= transaction.merchant.name %></td>
+    <td><%= transaction.type.type %></td>
+    <td>£<%= transaction.cost %></td>
     <td><%= transaction.date %></td>
   </tr>
   <% end %>
 </table>
-<h4>Total Amount Spent This Month</h4>
-<table>
+<h3>Total Amount Spent This Month</h3>
+<table id = "total">
+  <tr>
+    <th>Total Spent (£)</th>
   <tr>
     <td>£<%=@count%></td>
   </tr>
 </table>
 
-<h4>Total Amount Spent This Month By Type</h4>
-<table>
+<h3>Total Amount Spent This Month By Type</h3>
+<table id = "type">
 <tr>
   <%for position in @total_by_tag%>
-  <td><%=position['type']%></td>
+  <th><b><%=position['type']%></b></th>
   <%end%>
 </tr>
 <tr>

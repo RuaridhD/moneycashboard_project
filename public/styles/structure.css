@@ -3,7 +3,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   color: blue;
-  font-family: 'Merriweather', serif;
+  font-family: helvetica;
   padding: 0px;
   margin: 0px;
 }
@@ -15,6 +15,19 @@ body {
   z-index: 10;
   border-top: 5px solid rgba(0, 0, 0, 1);
   border-bottom: 5px solid rgba(0, 0, 0, 1);
+}
+
+.header li {
+  white-space: nowrap;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 250;
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 100px;
 }
 
 #top .content {
@@ -33,5 +46,21 @@ body {
 position: relative;
 top: 120px;
 width: 400px;
-margin: 0 auto;
+margin: 0 auto; */
+}
+
+h1, h2, h3, h4 {
+  position: center;
+  text-align: center;
+  font-family: 'Helvetica';
+}
+
+h1 {
+  background-color: rgb(7, 55, 132);
+  color: white;
+}
+
+h3 {
+  background-color: rgb(7, 55, 132);
+  color: white;
 }
