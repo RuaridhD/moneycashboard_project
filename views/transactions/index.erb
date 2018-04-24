@@ -21,33 +21,28 @@
   </tr>
   <% end %>
 </table>
+<h4>Total Amount Spent This Month</h4>
 <table>
-  <th>Total Amount Spent This Month</th>
   <tr>
     <td><%=@count%></td>
   </tr>
 </table>
 
+<h4>Total Amount Spent This Month By Type</h4>
 <table>
-  <th>Total Amount Spent This Month By Type</th>
-  <!-- <label>
-    <label for="Type">Choose a Type to Filter By:</label>
-    <select name="type_id">
-    <% for type in @types %>
-    <option value="<%= type.id %>"><%= type.type %></option>
-    <% end %>
-  </select>
-  </label> -->
-    <tr>
-    <%for position in @total_by_tag%>
-    <tr><td><%=position['type']%></td></tr>
-    <%end%>
-    <%for position in @total_by_tag%>
-    <tr><td><%=position['sum']%></td></tr>
-    <%end%>
+<tr>
+  <%for position in @total_by_tag%>
+  <td><%=position['type']%></td>
+  <%end%>
+</tr>
+<tr>
+  <%for position in @total_by_tag%>
+  <td><%=position['sum']%></td>
+  <%end%>
+</tr>
 
 
-  </tr>
+</tr>
 </table>
 
 
