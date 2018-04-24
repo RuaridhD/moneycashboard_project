@@ -34,19 +34,22 @@ body {
   border: 3px solid white;
   font-size: 25px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(128, 128, 128, 0.5);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: rgba(0,0,0,0.9);
+  background: rgba(128, 128, 128, 0.1) url(https://twcdaily.files.wordpress.com/2014/10/man-money-raining-down.jpeg);
+  background-position: center;
   position: relative;
   top: 200px;
   width: 400px;
   margin: 0 auto;
+
 }
 
 #section-all-txns {
 position: relative;
 top: 120px;
 width: 400px;
-margin: 0 auto; */
+margin: 0 auto;
 }
 
 h1, h2, h3, h4 {
@@ -63,4 +66,14 @@ h1 {
 h3 {
   background-color: rgb(7, 55, 132);
   color: white;
+}
+
+#section-new-txns {
+position: relative;
+top: 120px;
+width: 500px;
+margin: 0 auto;
+/* white-space: wrap; */
+text-align: center;
+display: inline;
 }

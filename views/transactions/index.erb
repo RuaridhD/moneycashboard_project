@@ -1,54 +1,53 @@
 <div id = "section-all-txns">
-<div class = "content">
-<h1>Transactions</h1>
-<h2></h2>
-<h3>All Transactions Made: Last 30 Days</h3>
+  <div class = "content">
+    <h1>Transactions</h1>
+    <h2></h2>
+    <h3>All Transactions Made: Last 30 Days</h3>
 
-<table id = "all">
-  <tr>
-    <th>Shop</th>
-    <th>Type</th>
-    <th>Cost</th>
-    <th>Date</th>
-  </tr>
-  <% for transaction in @transactions %>
-  <tr>
-    <td><%= transaction.merchant.name %></td>
-    <td><%= transaction.type.type %></td>
-    <td>£<%= transaction.cost %></td>
-    <td><%= transaction.date %></td>
-  </tr>
-  <% end %>
-</table>
-<h3>Total Amount Spent This Month</h3>
-<table id = "total">
-  <tr>
-    <th>Total Spent (£)</th>
-  <tr>
-    <td>£<%=@count%></td>
-  </tr>
-</table>
+    <table id = "all">
+      <tr>
+        <th>Shop</th>
+        <th>Type</th>
+        <th>Cost</th>
+        <th>Date</th>
+      </tr>
+      <% for transaction in @transactions %>
+      <tr>
+        <td><%= transaction.merchant.name %></td>
+        <td><%= transaction.type.type %></td>
+        <td>£<%= transaction.cost %></td>
+        <td><%= transaction.date %></td>
+      </tr>
+      <% end %>
+    </table>
+    <h3>Total Amount Spent This Month</h3>
+    <table id = "total">
+      <tr>
+        <th>Total Spent (£)</th>
+        <tr>
+          <td>£<%=@count%></td>
+        </tr>
+      </table>
 
-<h3>Total Amount Spent This Month By Type</h3>
-<table id = "type">
-<tr>
-  <%for position in @total_by_tag%>
-  <th><b><%=position['type']%></b></th>
-  <%end%>
-</tr>
-<tr>
-  <%for position in @total_by_tag%>
-  <td>£<%=position['sum']%></td>
-  <%end%>
-</tr>
-
-
-</tr>
-</table>
+      <h3>Total Amount Spent This Month By Type</h3>
+      <table id = "type">
+        <tr>
+          <%for position in @total_by_tag%>
+          <th><b><%=position['type']%></b></th>
+          <%end%>
+        </tr>
+        <tr>
+          <%for position in @total_by_tag%>
+          <td>£<%=position['sum']%></td>
+          <%end%>
+        </tr>
 
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/transactions/new">Add your latest transaction.</a>
-</p>
-</div>
+      </tr>
+    </table>
+    <form action="/transactions/new">
+      <input type="submit" value="Add New Transaction" />
+    </form>
+
+  </div>
 </div>
