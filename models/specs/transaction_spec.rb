@@ -45,10 +45,5 @@ class TransactionTest < MiniTest::Test
       assert_equal("Tesco", @transaction1.merchant.name)
     end
 
-    def test_count
-      count = Transaction.count()
-      binding.pry
-      nil
-    end
 
   end

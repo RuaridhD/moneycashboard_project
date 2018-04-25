@@ -1,5 +1,5 @@
 <div id = "section-type-txns">
-    <h1>Types of transaction</h1>
+    <h1 class = "non-index">Types of transaction</h1>
     <!-- <h2>Listed below are the types of transaction you made this month.</h2> -->
 
     <h3>Total Amount Spent This Month By Type</h3>
@@ -11,7 +11,7 @@
       </tr>
       <tr>
         <%for position in @total_by_tag%>
-        <td>£<%=position['sum']%></td>
+        <td>£<%= "%.2f" % position['sum']%></td>
         <%end%>
       </tr>
   </div>

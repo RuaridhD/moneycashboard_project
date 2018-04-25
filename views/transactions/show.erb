@@ -1,5 +1,5 @@
 <div id = "section-show-txns">
-  <h1>Showing <%=@transaction.merchant.name%> Transaction from <%=@transaction.date %>.</h1>
+  <h1 class = "non-index">Showing <%=@transaction.merchant.name%> Transaction from <%=@transaction.date %>.</h1>
   <table id = "show">
     <tr>
       <th>Shop</th>
@@ -10,7 +10,7 @@
     <tr>
       <td><%=@transaction.merchant.name %></td>
       <td><%=@transaction.type.type %></td>
-      <td>£<%=@transaction.cost %></td>
+      <td>£<%= "%.2f" % @transaction.cost %></td>
       <td><%=@transaction.date %></td>
     </table>
 

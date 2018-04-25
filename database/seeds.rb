@@ -109,7 +109,7 @@ type6.save()
 transaction1 = Transaction.new({
   "merchant_id" => merchant1.id,
   "type_id" => type1.id,
-  "cost" => 29.50,
+  "cost" => 29.99,
   "date" => "2018/03/20"
 })
 
@@ -136,7 +136,7 @@ transaction3.save()
 transaction4 = Transaction.new({
   "merchant_id" => merchant6.id,
   "type_id" => type4.id,
-  "cost" => 8.20,
+  "cost" => 8.25,
   "date" => "2018/04/03"
 })
 

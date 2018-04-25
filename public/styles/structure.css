@@ -58,15 +58,11 @@ h1, h2, h3, h4 {
   font-family: 'Helvetica';
 }
 
-/* h1 {
+h1.non-index {
   background-color: rgb(7, 55, 132);
   color: white;
-} */
+}
 
-/* h2 {
-  background-color: rgb(7, 55, 132);
-  color: white;
-} */
 
 
 h3 {
