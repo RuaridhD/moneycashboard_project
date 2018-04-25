@@ -14,7 +14,7 @@
       <td><%=@transaction.date %></td>
     </table>
 
-    <form action="/transactions/<%= @transaction.id %>/edit" method="POST">
+    <form action="/transactions/<%= @transaction.id %>/edit" method="GET">
       <input class="button" type="submit" value="EDIT" />
     </form>
 

@@ -89,7 +89,6 @@ top: 120px;
 width: 500px;
 margin: 0 auto;
 text-align: center;
-display: inline;
 }
 
 #section-type-txns {
@@ -98,4 +97,13 @@ top: 120px;
 width: 500px;
 margin: 0 auto;
 text-align: center;
+}
+
+#section-edit-txns {
+position: relative;
+top: 120px;
+width: 500px;
+margin: 0 auto;
+text-align: center;
+display: inline;
 }

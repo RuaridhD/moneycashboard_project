@@ -37,7 +37,14 @@ post '/transactions/:id/delete' do
   redirect to("/transactions")
 end
 
-post "/transactions/:id/edit" do
+get "/transactions/:id/edit" do
+  @merchants = Merchant.all()
+  @types = Type.all()
+  @transaction = Transaction.find(params[:id])
+  erb(:"transactions/edit")
+  end
+
+post "/transactions/:id/update" do
   txn = Transaction.new(params)
   txn.update()
   redirect to "/transactions"
