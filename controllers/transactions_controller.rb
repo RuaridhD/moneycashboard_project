@@ -36,3 +36,9 @@ post '/transactions/:id/delete' do
   Transaction.delete(params[:id])
   redirect to("/transactions")
 end
+
+post "/transactions/:id/edit" do
+  txn = Transaction.new(params)
+  txn.update()
+  redirect to "/transactions"
+end

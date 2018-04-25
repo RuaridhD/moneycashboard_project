@@ -40,7 +40,7 @@ body {
   background-position: center;
   position: relative;
   top: 200px;
-  width: 400px;
+  width: 420px;
   margin: 0 auto;
 
 }
@@ -58,10 +58,16 @@ h1, h2, h3, h4 {
   font-family: 'Helvetica';
 }
 
-h1 {
+/* h1 {
   background-color: rgb(7, 55, 132);
   color: white;
-}
+} */
+
+/* h2 {
+  background-color: rgb(7, 55, 132);
+  color: white;
+} */
+
 
 h3 {
   background-color: rgb(7, 55, 132);
@@ -84,4 +90,12 @@ width: 500px;
 margin: 0 auto;
 text-align: center;
 display: inline;
+}
+
+#section-type-txns {
+position: relative;
+top: 120px;
+width: 500px;
+margin: 0 auto;
+text-align: center;
 }

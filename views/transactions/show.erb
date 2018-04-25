@@ -14,7 +14,12 @@
       <td><%=@transaction.date %></td>
     </table>
 
+    <form action="/transactions/<%= @transaction.id %>/edit" method="POST">
+      <input class="button" type="submit" value="EDIT" />
+    </form>
+
     <form action="/transactions/<%= @transaction.id %>/delete" method="POST">
       <input class="button" type="submit" value="DELETE" />
     </form>
+
   </div>

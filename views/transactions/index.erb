@@ -20,6 +20,9 @@
       </tr>
       <% end %>
     </table>
+    <form action="/transactions/new">
+      <input type="submit" value="Add New Transaction" />
+    </form>
     <h3>Total Amount Spent This Month</h3>
     <table id = "total">
       <tr>
@@ -29,25 +32,9 @@
         </tr>
       </table>
 
-      <h3>Total Amount Spent This Month By Type</h3>
-      <table id = "type">
-        <tr>
-          <%for position in @total_by_tag%>
-          <th><b><%=position['type']%></b></th>
-          <%end%>
-        </tr>
-        <tr>
-          <%for position in @total_by_tag%>
-          <td>£<%=position['sum']%></td>
-          <%end%>
-        </tr>
-
 
       </tr>
     </table>
-    <form action="/transactions/new">
-      <input type="submit" value="Add New Transaction" />
-    </form>
 
   </div>
 </div>

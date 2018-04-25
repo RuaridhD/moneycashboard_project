@@ -1,2 +1,17 @@
-<h1>Types of transaction</h1>
-<h2>Listed below are the types of transaction you made this month.</h2>
+<div id = "section-type-txns">
+    <h1>Types of transaction</h1>
+    <!-- <h2>Listed below are the types of transaction you made this month.</h2> -->
+
+    <h3>Total Amount Spent This Month By Type</h3>
+    <table id = "type">
+      <tr>
+        <%for position in @total_by_tag%>
+        <th><b><%=position['type']%></b></th>
+        <%end%>
+      </tr>
+      <tr>
+        <%for position in @total_by_tag%>
+        <td>£<%=position['sum']%></td>
+        <%end%>
+      </tr>
+  </div>

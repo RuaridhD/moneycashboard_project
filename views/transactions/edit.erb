@@ -1,12 +1,12 @@
-<div id = "section-new-txns">
+<div id = "section-edit-txns">
 
-    <h2>Add a new transaction</h2>
+    <h1>Edit your transaction</h1>
 
-    <form action="/transactions" method="post">
+    <form action="/transactions/<%= @transaction.id %>/edit" method="post">
       <label for="Merchant Name:">Merchant Name:</label>
       <select name="merchant_id">
         <% for merchant in @merchants %>
-        <option value="<%= merchant.id %>"><%= merchant.name %></option>
+        <option value="<%=merchant.id %>"><%= merchant.name %></option>
         <% end %>
       </select>
 
@@ -25,7 +25,7 @@
       <label for="date">Date:</label>
       <input type="date" id="date" name="date">
 
-      <input class="button" type='submit' value="Add Transaction">
+      <input class="button" type='submit' value="Resubmit Transaction">
 
     </form>
 
