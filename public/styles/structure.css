@@ -70,6 +70,11 @@ h3 {
   color: white;
 }
 
+h4 {
+  background-color: rgb(7, 55, 132);
+  color: white;
+}
+
 #section-new-txns {
 position: relative;
 top: 120px;

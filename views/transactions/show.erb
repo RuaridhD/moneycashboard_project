@@ -14,6 +14,10 @@
       <td><%=@transaction.date %></td>
     </table>
 
+    <form action="/transactions" method="GET">
+      <input class="button" type="submit" value="BACK" />
+    </form>
+
     <form action="/transactions/<%= @transaction.id %>/edit" method="GET">
       <input class="button" type="submit" value="EDIT" />
     </form>
